@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.pytest-tmp/
+*.egg-info/
+dist/
+build/
+.cmsp/
+scope.json
+*.nmap.xml
+reports/
