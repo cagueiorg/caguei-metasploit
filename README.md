@@ -13,12 +13,10 @@
  | |  | | |___  | |/ ___ \ ___) |  __/| |__| |_| | |  | |
  |_|  |_|_____| |_/_/   \_\____/|_|   |_____\___/___| |_|
 
-          auditoria defensiva • offline • autorizada
+
 ```
 
-Uma CLI **defensiva, offline e orientada a evidências** para organizar resultados de laboratórios autorizados. O nome é irreverente; o comportamento é deliberadamente conservador. O projeto é apenas inspirado na ideia de uma console modular: não copia código, marca ou interface do Metasploit.
-
-> Este software não contém exploits, payloads, persistência, evasão, execução remota ou scanner de rede. Ele nunca inicia conexões com os alvos: analisa somente arquivos Nmap XML já existentes.
+Uma CLI **defensiva, offline e orientada a evidências** para organizar resultados de laboratórios autorizados. 
 
 ## Recursos do MVP
 
@@ -85,21 +83,6 @@ python -m pytest
 
 Consulte [ARCHITECTURE.md](ARCHITECTURE.md) para os limites e pontos de extensão. Novos módulos devem analisar apenas registros locais e retornar achados; módulos que abram sockets, executem comandos remotos ou alterem alvos não serão aceitos.
 
-## Publicar no GitHub
-
-1. Crie um repositório vazio no GitHub, preferencialmente privado durante a revisão inicial.
-2. Revise o nome, o arquivo `LICENSE` e remova dados reais de laboratório.
-3. Execute os testes.
-4. Publique:
-
-```bash
-git init
-git add .
-git commit -m "Initial safe defensive MVP"
-git branch -M main
-git remote add origin https://github.com/SEU-USUARIO/caguei-metasploit.git
-git push -u origin main
-```
 
 Não versionar `.cmsp`, scopes reais, XMLs de varredura ou relatórios. O `.gitignore` já cobre os caminhos padrão.
 
